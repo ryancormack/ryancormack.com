@@ -2,7 +2,7 @@
   "id": "FEAT-002",
   "type": "feat",
   "description": "Create Hero, About, and Experience section components.",
-  "status": "in_progress",
+  "status": "completed",
   "steps": [
     "Step 1: Create src/components/Hero.astro. Full-width section with id='hero', vertically centered content, padding-top to account for fixed header. Large h1 'Ryan Cormack', h2 'Principal Engineer at Motorway', p tagline 'AWS Community Builder | Serverless & Event-Driven Architecture | Speaker & Writer'. Social links row with inline SVG icons for GitHub (https://github.com/ryancormack), Twitter/X (https://twitter.com/ryancormack), LinkedIn (https://www.linkedin.com/in/ryancormack), Medium (https://medium.com/@ryan.cormack). All links target='_blank' rel='noopener noreferrer'. CSS fade-in + slide-up animation using @keyframes. Use the theme CSS variables from BaseLayout.",
     "Step 2: Create src/components/About.astro. Section with id='about', max-width container centered. h2 'About Me'. Three paragraphs: (1) Ryan is a Principal Engineer at Motorway with a unique journey from digital marketing to software engineering, specialising in serverless and event-driven architectures on AWS. (2) As an AWS Community Builder, he shares knowledge through conference talks (including AWS re:Invent), blog posts, and open source contributions. He has contributed to major projects like terraform-provider-aws and aws-lambda-power-tuning. (3) He co-founded MemoryStoria, an online memoirs platform that raised EU funding, demonstrating entrepreneurial drive alongside engineering expertise. Then a skills grid of pill badges: AWS, Serverless, TypeScript, Event-Driven Architecture, CDK, Terraform, Node.js, .NET, Lambda, API Gateway, Swift, Infrastructure as Code. Then a styled blockquote card with the quote: 'Ryan is one of the best engineers I have been working with. He is a combination of knowledge, skills and pragmatism. He is exceptional at keeping things simple and avoid overcomplication.' attributed to Eugene Pavliy.",
@@ -19,5 +19,5 @@
   ],
   "verification": ["Run cd /projects/sandbox/ryancormack.com && npm run build"],
   "blocked_reason": null,
-  "findings": ""
+  "findings": "All four components created (Hero, About, Experience, Footer) plus index.astro updated. Used existing global .container and .section-heading classes from BaseLayout. Each section manages its own padding (5rem 1.5rem, responsive to 3.5rem at 768px) consistent with BaseLayout global section rule. Hero uses 90vh min-height with 80px padding-top for fixed header clearance. Build passes cleanly on Node 22."
 }
