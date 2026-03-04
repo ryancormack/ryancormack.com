@@ -1,0 +1,21 @@
+{
+  "id": "FEAT-001",
+  "type": "feat",
+  "description": "Create BaseLayout with light/dark theme and Header component with mobile nav.",
+  "status": "in_progress",
+  "steps": [
+    "Step 1: Rewrite src/layouts/BaseLayout.astro. Accept a title prop. Include: charset utf-8, viewport, description meta ('Ryan Cormack - Principal Engineer, AWS Community Builder, and serverless specialist'), author meta, Google Fonts link for Inter (weights 400, 500, 600, 700), global CSS reset, CSS custom properties for theming, smooth scroll on html, and a slot for content.",
+    "Step 2: Theme system in BaseLayout. Define CSS custom properties on html[data-theme='light'] and html[data-theme='dark']. Light: --color-bg: #ffffff, --color-text: #1a1a2e, --color-text-muted: #64748b, --color-primary: #3b82f6, --color-accent: #2563eb, --color-card-bg: #f8fafc, --color-border: #e2e8f0, --color-hero-bg: #f1f5f9. Dark: --color-bg: #0f172a, --color-text: #e2e8f0, --color-text-muted: #94a3b8, --color-primary: #60a5fa, --color-accent: #3b82f6, --color-card-bg: #1e293b, --color-border: #334155, --color-hero-bg: #1e293b. Add inline <script> in <head> (is:inline) that checks localStorage('theme') or prefers-color-scheme and sets data-theme on document.documentElement BEFORE paint.",
+    "Step 3: Create src/components/Header.astro. Fixed/sticky header with z-index, backdrop-filter blur, border-bottom. Left: 'Ryan Cormack' link to #hero. Center/right: nav links (About #about, Experience #experience, Projects #projects, Talks #talks, Blog #blog). Far right: theme toggle button with sun SVG (shown in dark mode) and moon SVG (shown in light mode). Toggle script toggles data-theme and saves to localStorage. Mobile: hamburger button visible below 768px, nav links hidden and shown in a dropdown when hamburger is clicked.",
+    "Step 4: Run npm run build to verify. Fix any issues."
+  ],
+  "acceptance_criteria": [
+    "npm run build succeeds",
+    "BaseLayout has working light/dark CSS custom properties",
+    "Header is sticky with nav links and theme toggle",
+    "Mobile hamburger menu works below 768px"
+  ],
+  "verification": ["Run cd /projects/sandbox/ryancormack.com && npm run build"],
+  "blocked_reason": null,
+  "findings": ""
+}

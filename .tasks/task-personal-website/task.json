@@ -1,0 +1,7 @@
+{
+  "task_id": "task-personal-website",
+  "task_description": "Build a complete brochure-style personal website for Ryan Cormack using Astro with light/dark theme, showcasing experience, GitHub projects, YouTube talks, Medium blog, and professional achievements.",
+  "status": "in_progress",
+  "feature_order": ["FEAT-001", "FEAT-002", "FEAT-003", "FEAT-004"],
+  "blocked_reason": null
+}

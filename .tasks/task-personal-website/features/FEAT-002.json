@@ -1,0 +1,23 @@
+{
+  "id": "FEAT-002",
+  "type": "feat",
+  "description": "Create Hero, About, and Experience section components.",
+  "status": "pending",
+  "steps": [
+    "Step 1: Create src/components/Hero.astro. Full-width section with id='hero', vertically centered content, padding-top to account for fixed header. Large h1 'Ryan Cormack', h2 'Principal Engineer at Motorway', p tagline 'AWS Community Builder | Serverless & Event-Driven Architecture | Speaker & Writer'. Social links row with inline SVG icons for GitHub (https://github.com/ryancormack), Twitter/X (https://twitter.com/ryancormack), LinkedIn (https://www.linkedin.com/in/ryancormack), Medium (https://medium.com/@ryan.cormack). All links target='_blank' rel='noopener noreferrer'. CSS fade-in + slide-up animation using @keyframes. Use the theme CSS variables from BaseLayout.",
+    "Step 2: Create src/components/About.astro. Section with id='about', max-width container centered. h2 'About Me'. Three paragraphs: (1) Ryan is a Principal Engineer at Motorway with a unique journey from digital marketing to software engineering, specialising in serverless and event-driven architectures on AWS. (2) As an AWS Community Builder, he shares knowledge through conference talks (including AWS re:Invent), blog posts, and open source contributions. He has contributed to major projects like terraform-provider-aws and aws-lambda-power-tuning. (3) He co-founded MemoryStoria, an online memoirs platform that raised EU funding, demonstrating entrepreneurial drive alongside engineering expertise. Then a skills grid of pill badges: AWS, Serverless, TypeScript, Event-Driven Architecture, CDK, Terraform, Node.js, .NET, Lambda, API Gateway, Swift, Infrastructure as Code. Then a styled blockquote card with the quote: 'Ryan is one of the best engineers I have been working with. He is a combination of knowledge, skills and pragmatism. He is exceptional at keeping things simple and avoid overcomplication.' attributed to Eugene Pavliy.",
+    "Step 3: Create src/components/Experience.astro. Section with id='experience'. h2 'Experience'. Two role cards with a timeline visual (vertical line on left with dots). Card 1: 'Principal Engineer' at 'Motorway' (Current). Bullet points: Led the design and delivery of Motorway's first event-driven system, shipping in weeks with a decoupled and isolated architecture; Driving API platform strategy across documentation, SDK generation, WAF configuration, and authentication patterns; Championing engineering best practices and mentoring across the organisation; Working with modern tooling including Smithy, MCP servers, and AI-assisted development. Card 2: 'Serverless Engineer' at 'Moonpig'. Bullet points: Built and maintained serverless services on AWS powering the platform for personalised cards and gifts; Optimised Lambda performance using AWS Lambda Power Tuning for cost and latency improvements; Implemented feature flags on AWS for safe incremental rollouts; Contributed to cloud architecture decisions with Advanced Architecting on AWS certification.",
+    "Step 4: Update src/pages/index.astro to import BaseLayout, Header, Hero, About, Experience, and a Footer placeholder. Wrap content in BaseLayout with title 'Ryan Cormack - Principal Engineer'. Include Header, then main element containing Hero, About, Experience sections. Add a simple footer with social links and copyright for now.",
+    "Step 5: Run npm run build to verify."
+  ],
+  "acceptance_criteria": [
+    "npm run build succeeds",
+    "Hero shows name, title, tagline, social links with SVG icons",
+    "About section has summary paragraphs, skill pills, recommendation quote",
+    "Experience shows two role cards with timeline styling",
+    "Index page assembles all components correctly"
+  ],
+  "verification": ["Run cd /projects/sandbox/ryancormack.com && npm run build"],
+  "blocked_reason": null,
+  "findings": ""
+}

@@ -1,0 +1,25 @@
+{
+  "id": "FEAT-004",
+  "type": "feat",
+  "description": "Create Talks and Writing sections, finalize Footer, and polish responsive design.",
+  "status": "pending",
+  "steps": [
+    "Step 1: Create src/components/Talks.astro. Section with id='talks'. h2 'Talks & Presentations'. Intro paragraph. Two talk cards in a flex/grid row (stacked on mobile). Each card: YouTube thumbnail image (use https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg), play button SVG overlay on the thumbnail, talk title as h3, description paragraph, link to YouTube video. Talk 1: 'Shifting Gears: From Events to Event-Driven', video ID 1dWJO31wpV8, description 'How Motorway delivered the first event-driven system in a matter of weeks in a decoupled and isolated way.' Talk 2: 'APIs in the Fast Lane', video ID mFtuTPgrFbA, description 'Tackling the challenges of API docs, outdated SDKs, WAFs, and custom authentication logic when teams want to move fast.' Add 'More on YouTube' link to https://www.youtube.com/c/RyanCormack. All links target='_blank' rel='noopener noreferrer'.",
+    "Step 2: Create src/components/Writing.astro. Section with id='blog'. h2 'Writing'. Intro: 'I write about serverless engineering, AWS, and event-driven architectures on Medium.' Styled list of article titles: 'Tune if you want to go faster', 'Debugging Terraform Lambda locally with SAM', 'Orchestrating long running ECS tasks', 'Feature Flags on AWS', '.NET Lambda Annotations and Terraform'. Prominent 'Read more on Medium' button linking to https://medium.com/@ryan.cormack (target='_blank' rel='noopener noreferrer').",
+    "Step 3: Create a proper src/components/Footer.astro. Social links row with inline SVG icons (GitHub, Twitter/X, LinkedIn, Medium - same URLs as hero). Copyright line with current year. Subtle top border, centered layout.",
+    "Step 4: Update src/pages/index.astro to import and include Talks, Writing, and the proper Footer component in the correct order: Header, Hero, About, Experience, Projects, Talks, Writing, Footer.",
+    "Step 5: Review all components for responsive design consistency. Ensure sections have consistent max-width containers, proper padding/margins, and appropriate spacing at all breakpoints (mobile 320px+, tablet 768px+, desktop 1024px+).",
+    "Step 6: Run npm run build to verify the complete site builds."
+  ],
+  "acceptance_criteria": [
+    "npm run build succeeds",
+    "Talks section shows 2 YouTube talks with thumbnails and play overlays",
+    "Writing section lists 5 article titles and Medium link",
+    "Footer has social icons and copyright",
+    "Complete page flows: hero -> about -> experience -> projects -> talks -> writing -> footer",
+    "All sections responsive"
+  ],
+  "verification": ["Run cd /projects/sandbox/ryancormack.com && npm run build"],
+  "blocked_reason": null,
+  "findings": ""
+}

@@ -1,0 +1,23 @@
+{
+  "id": "FEAT-003",
+  "type": "feat",
+  "description": "Create Projects section with GitHub repo cards in a responsive grid.",
+  "status": "pending",
+  "steps": [
+    "Step 1: Create src/components/Projects.astro. Section with id='projects'. h2 'Open Source & Projects'. Responsive CSS grid (1 col mobile, 2 cols at 768px, 3 cols at 1024px). Each project is a card with: repo name as h3, description paragraph, footer row with language badge (colored dot + name) and star count. Card links to GitHub repo (target='_blank' rel='noopener noreferrer'). Hover effect: translateY(-4px) + box-shadow increase. Use --color-card-bg, --color-border, --color-text theme variables. Archived repos get a small 'Archived' badge.",
+    "Step 2: Project data (hardcoded in component): (1) strands-ts, 'TypeScript implementation of Strands agents framework', TypeScript, 8 stars, archived, https://github.com/ryancormack/strands-ts (2) cdk-webapp, 'Multiple ways to deploy a static web app and serverless backend to AWS with CDK', TypeScript, 7 stars, archived, https://github.com/ryancormack/cdk-webapp (3) kiro-mcp-manager, 'MCP server manager for macOS', Swift, 2 stars, https://github.com/ryancormack/kiro-mcp-manager (4) strands-agents-ui, 'UI for Strands AI agents', TypeScript, 2 stars, https://github.com/ryancormack/strands-agents-ui (5) aws-console-share-extension, 'Browser extension for sharing AWS console sessions', TypeScript, 2 stars, https://github.com/ryancormack/aws-console-share-extension (6) apple-containers-ui, 'UI for Apple containers on macOS', Swift, 0, https://github.com/ryancormack/apple-containers-ui (7) smithy-mcp, 'Smithy MCP server integration', TypeScript, 0, https://github.com/ryancormack/smithy-mcp (8) parameter-store-extension, 'AWS Parameter Store Lambda Extension demo', TypeScript, 1 star, https://github.com/ryancormack/parameter-store-extension. Language colors: TypeScript=#3178c6, Swift=#f05138.",
+    "Step 3: Add 'View all 60+ repositories on GitHub' link at bottom, styled as a button/link, pointing to https://github.com/ryancormack?tab=repositories",
+    "Step 4: Import Projects into src/pages/index.astro and place it after Experience section, before Footer.",
+    "Step 5: Run npm run build to verify."
+  ],
+  "acceptance_criteria": [
+    "npm run build succeeds",
+    "8 project cards displayed in responsive grid",
+    "Cards show name, description, language badge with color, stars",
+    "Archived badges on strands-ts and cdk-webapp",
+    "View all link at bottom"
+  ],
+  "verification": ["Run cd /projects/sandbox/ryancormack.com && npm run build"],
+  "blocked_reason": null,
+  "findings": ""
+}
