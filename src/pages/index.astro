@@ -1,15 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Experience from '../components/Experience.astro';
+import Footer from '../components/Footer.astro';
 ---
 <BaseLayout title="Ryan Cormack - Principal Engineer">
   <Header />
   <main>
-    <section id="hero"><h1>Ryan Cormack</h1></section>
-    <section id="about"><h2>About</h2></section>
-    <section id="experience"><h2>Experience</h2></section>
-    <section id="projects"><h2>Projects</h2></section>
-    <section id="talks"><h2>Talks</h2></section>
-    <section id="blog"><h2>Blog</h2></section>
+    <Hero />
+    <About />
+    <Experience />
   </main>
+  <Footer />
 </BaseLayout>
