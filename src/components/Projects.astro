@@ -1,0 +1,264 @@
+---
+const projects = [
+  {
+    name: "strands-ts",
+    description: "TypeScript implementation of Strands agents framework",
+    language: "TypeScript",
+    stars: 8,
+    archived: true,
+    url: "https://github.com/ryancormack/strands-ts",
+  },
+  {
+    name: "cdk-webapp",
+    description: "Multiple ways to deploy a static web app and serverless backend to AWS with CDK",
+    language: "TypeScript",
+    stars: 7,
+    archived: true,
+    url: "https://github.com/ryancormack/cdk-webapp",
+  },
+  {
+    name: "kiro-mcp-manager",
+    description: "MCP server manager for macOS",
+    language: "Swift",
+    stars: 2,
+    archived: false,
+    url: "https://github.com/ryancormack/kiro-mcp-manager",
+  },
+  {
+    name: "strands-agents-ui",
+    description: "UI for Strands AI agents",
+    language: "TypeScript",
+    stars: 2,
+    archived: false,
+    url: "https://github.com/ryancormack/strands-agents-ui",
+  },
+  {
+    name: "aws-console-share-extension",
+    description: "Browser extension for sharing AWS console sessions",
+    language: "TypeScript",
+    stars: 2,
+    archived: false,
+    url: "https://github.com/ryancormack/aws-console-share-extension",
+  },
+  {
+    name: "apple-containers-ui",
+    description: "UI for Apple containers on macOS",
+    language: "Swift",
+    stars: 0,
+    archived: false,
+    url: "https://github.com/ryancormack/apple-containers-ui",
+  },
+  {
+    name: "smithy-mcp",
+    description: "Smithy MCP server integration",
+    language: "TypeScript",
+    stars: 0,
+    archived: false,
+    url: "https://github.com/ryancormack/smithy-mcp",
+  },
+  {
+    name: "parameter-store-extension",
+    description: "AWS Parameter Store Lambda Extension demo",
+    language: "TypeScript",
+    stars: 1,
+    archived: false,
+    url: "https://github.com/ryancormack/parameter-store-extension",
+  },
+];
+
+const languageColors: Record<string, string> = {
+  TypeScript: "#3178c6",
+  Swift: "#f05138",
+};
+---
+
+<section id="projects">
+  <div class="container">
+    <h2 class="section-heading">Open Source & Projects</h2>
+
+    <div class="projects-grid">
+      {projects.map((project) => (
+        <a href={project.url} target="_blank" rel="noopener noreferrer" class="project-card">
+          <div class="card-top">
+            <div class="card-name-row">
+              <h3 class="project-name">{project.name}</h3>
+              {project.archived && <span class="badge-archived">Archived</span>}
+            </div>
+            <svg class="external-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
+            </svg>
+          </div>
+          <p class="project-description">{project.description}</p>
+          <div class="card-footer">
+            <span class="language-badge">
+              <span class="language-dot" style={`background-color: ${languageColors[project.language] || '#888'}`}></span>
+              {project.language}
+            </span>
+            {project.stars > 0 && (
+              <span class="stars-badge">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                {project.stars}
+              </span>
+            )}
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="view-all">
+      <a href="https://github.com/ryancormack?tab=repositories" target="_blank" rel="noopener noreferrer" class="view-all-link">
+        View all 60+ repositories on GitHub
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12" />
+          <polyline points="12 5 19 12 12 19" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  #projects {
+    padding: 5rem 1.5rem;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .card-name-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .project-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text);
+  }
+
+  .badge-archived {
+    background: var(--color-border);
+    border-radius: 4px;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+  }
+
+  .external-icon {
+    color: var(--color-text-muted);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .project-description {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    flex: 1;
+    margin-bottom: 1rem;
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .language-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+
+  .language-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .stars-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+
+  .view-all {
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+
+  .view-all-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .view-all-link:hover {
+    opacity: 0.8;
+  }
+
+  @media (min-width: 768px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    #projects {
+      padding: 3.5rem 1.5rem;
+    }
+  }
+</style>
