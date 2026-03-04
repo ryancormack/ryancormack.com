@@ -2,7 +2,7 @@
   "id": "FEAT-003",
   "type": "feat",
   "description": "Create Projects section with GitHub repo cards in a responsive grid.",
-  "status": "in_progress",
+  "status": "completed",
   "steps": [
     "Step 1: Create src/components/Projects.astro. Section with id='projects'. h2 'Open Source & Projects'. Responsive CSS grid (1 col mobile, 2 cols at 768px, 3 cols at 1024px). Each project is a card with: repo name as h3, description paragraph, footer row with language badge (colored dot + name) and star count. Card links to GitHub repo (target='_blank' rel='noopener noreferrer'). Hover effect: translateY(-4px) + box-shadow increase. Use --color-card-bg, --color-border, --color-text theme variables. Archived repos get a small 'Archived' badge.",
     "Step 2: Project data (hardcoded in component): (1) strands-ts, 'TypeScript implementation of Strands agents framework', TypeScript, 8 stars, archived, https://github.com/ryancormack/strands-ts (2) cdk-webapp, 'Multiple ways to deploy a static web app and serverless backend to AWS with CDK', TypeScript, 7 stars, archived, https://github.com/ryancormack/cdk-webapp (3) kiro-mcp-manager, 'MCP server manager for macOS', Swift, 2 stars, https://github.com/ryancormack/kiro-mcp-manager (4) strands-agents-ui, 'UI for Strands AI agents', TypeScript, 2 stars, https://github.com/ryancormack/strands-agents-ui (5) aws-console-share-extension, 'Browser extension for sharing AWS console sessions', TypeScript, 2 stars, https://github.com/ryancormack/aws-console-share-extension (6) apple-containers-ui, 'UI for Apple containers on macOS', Swift, 0, https://github.com/ryancormack/apple-containers-ui (7) smithy-mcp, 'Smithy MCP server integration', TypeScript, 0, https://github.com/ryancormack/smithy-mcp (8) parameter-store-extension, 'AWS Parameter Store Lambda Extension demo', TypeScript, 1 star, https://github.com/ryancormack/parameter-store-extension. Language colors: TypeScript=#3178c6, Swift=#f05138.",
@@ -19,5 +19,5 @@
   ],
   "verification": ["Run cd /projects/sandbox/ryancormack.com && npm run build"],
   "blocked_reason": null,
-  "findings": ""
+  "findings": "Created Projects.astro with 8 hardcoded project cards in a responsive CSS grid (1/2/3 columns). Cards use same --color-card-bg and --color-border variables as Experience cards. Archived badges on strands-ts and cdk-webapp. Language dots colored per spec (TypeScript=#3178c6, Swift=#f05138). Star counts shown only when > 0. View all link at bottom with arrow icon. Section padding follows same pattern as other sections (5rem desktop, 3.5rem mobile). Build passes cleanly."
 }
