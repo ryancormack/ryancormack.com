@@ -2,7 +2,7 @@
   "id": "FEAT-004",
   "type": "feat",
   "description": "Create Talks and Writing sections, finalize Footer, and polish responsive design.",
-  "status": "pending",
+  "status": "in_progress",
   "steps": [
     "Step 1: Create src/components/Talks.astro. Section with id='talks'. h2 'Talks & Presentations'. Intro paragraph. Two talk cards in a flex/grid row (stacked on mobile). Each card: YouTube thumbnail image (use https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg), play button SVG overlay on the thumbnail, talk title as h3, description paragraph, link to YouTube video. Talk 1: 'Shifting Gears: From Events to Event-Driven', video ID 1dWJO31wpV8, description 'How Motorway delivered the first event-driven system in a matter of weeks in a decoupled and isolated way.' Talk 2: 'APIs in the Fast Lane', video ID mFtuTPgrFbA, description 'Tackling the challenges of API docs, outdated SDKs, WAFs, and custom authentication logic when teams want to move fast.' Add 'More on YouTube' link to https://www.youtube.com/c/RyanCormack. All links target='_blank' rel='noopener noreferrer'.",
     "Step 2: Create src/components/Writing.astro. Section with id='blog'. h2 'Writing'. Intro: 'I write about serverless engineering, AWS, and event-driven architectures on Medium.' Styled list of article titles: 'Tune if you want to go faster', 'Debugging Terraform Lambda locally with SAM', 'Orchestrating long running ECS tasks', 'Feature Flags on AWS', '.NET Lambda Annotations and Terraform'. Prominent 'Read more on Medium' button linking to https://medium.com/@ryan.cormack (target='_blank' rel='noopener noreferrer').",
