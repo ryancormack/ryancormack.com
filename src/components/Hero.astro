@@ -3,6 +3,9 @@
 
 <section id="hero" class="hero">
   <div class="hero-content">
+    <div class="profile-image-container">
+      <img src="/profile.jpg" alt="Ryan Cormack" class="profile-image" />
+    </div>
     <h1 class="hero-name">Ryan Cormack</h1>
     <p class="subtitle">Principal Engineer at Motorway</p>
     <p class="tagline">AWS Community Builder | Serverless & Event-Driven Architecture | Speaker & Writer</p>
@@ -47,6 +50,19 @@
     text-align: center;
     max-width: 800px;
     animation: fadeInUp 0.8s ease-out;
+  }
+
+  .profile-image-container {
+    margin: 0 auto 1.5rem;
+  }
+
+  .profile-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 
   .hero-name {
@@ -101,6 +117,11 @@
   }
 
   @media (max-width: 768px) {
+    .profile-image {
+      width: 120px;
+      height: 120px;
+    }
+
     .hero-name {
       font-size: 2.5rem;
     }
