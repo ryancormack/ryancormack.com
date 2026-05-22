@@ -1,21 +1,40 @@
 ---
 const articles = [
-  "Tune if you want to go faster",
-  "Debugging Terraform Lambda locally with SAM",
-  "Orchestrating long running ECS tasks",
-  "Feature Flags on AWS",
-  ".NET Lambda Annotations and Terraform",
+  {
+    title: "ACP and Strands: An Open Source Match",
+    url: "https://builder.aws.com/content/2zlrToooEi90ftoNGZ7v0Vw5kZB/acp-and-strands-an-open-source-match",
+  },
+  {
+    title: "Tune if you want to go faster",
+    url: "https://medium.com/@ryan.cormack",
+  },
+  {
+    title: "Debugging Terraform Lambda locally with SAM",
+    url: "https://medium.com/@ryan.cormack",
+  },
+  {
+    title: "Orchestrating long running ECS tasks",
+    url: "https://medium.com/@ryan.cormack",
+  },
+  {
+    title: "Feature Flags on AWS",
+    url: "https://medium.com/@ryan.cormack",
+  },
+  {
+    title: ".NET Lambda Annotations and Terraform",
+    url: "https://medium.com/@ryan.cormack",
+  },
 ];
 ---
 
 <section id="blog">
   <div class="container">
     <h2 class="section-heading">Writing</h2>
-    <p class="section-intro">I write about serverless engineering, AWS, and event-driven architectures on Medium.</p>
+    <p class="section-intro">I write about serverless engineering, AWS, and event-driven architectures on Medium and Builder Centre.</p>
 
     <div class="articles-list">
-      {articles.map((title) => (
-        <div class="article-item">
+      {articles.map((article) => (
+        <a href={article.url} target="_blank" rel="noopener noreferrer" class="article-item">
           <svg class="article-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
             <polyline points="14 2 14 8 20 8" />
@@ -23,14 +42,21 @@ const articles = [
             <line x1="16" y1="17" x2="8" y2="17" />
             <polyline points="10 9 9 9 8 9" />
           </svg>
-          <span class="article-title">{title}</span>
-        </div>
+          <span class="article-title">{article.title}</span>
+        </a>
       ))}
     </div>
 
     <div class="cta-container">
       <a href="https://medium.com/@ryan.cormack" target="_blank" rel="noopener noreferrer" class="medium-button">
         Read more on Medium
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12" />
+          <polyline points="12 5 19 12 12 19" />
+        </svg>
+      </a>
+      <a href="https://builder.aws.com" target="_blank" rel="noopener noreferrer" class="medium-button builder-button">
+        Builder Centre
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="5" y1="12" x2="19" y2="12" />
           <polyline points="12 5 19 12 12 19" />
@@ -70,6 +96,13 @@ const articles = [
     gap: 0.75rem;
     padding: 1rem 1.25rem;
     border-bottom: 1px solid var(--color-border);
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s ease;
+  }
+
+  .article-item:hover {
+    background: var(--color-border);
   }
 
   .article-item:last-child {
@@ -88,7 +121,11 @@ const articles = [
   }
 
   .cta-container {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
     margin-top: 2rem;
   }
 
@@ -108,6 +145,10 @@ const articles = [
 
   .medium-button:hover {
     opacity: 0.85;
+  }
+
+  .builder-button {
+    background: var(--color-accent);
   }
 
   @media (max-width: 768px) {

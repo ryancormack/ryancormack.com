@@ -19,6 +19,15 @@ const featuredProject = {
 
 const projects = [
   {
+    name: "strands-acp",
+    description: "ACP bridge for Strands agents - expose any Strands agent via the Agent Client Protocol",
+    language: "TypeScript",
+    stars: 0,
+    archived: false,
+    url: "https://github.com/ryancormack/strands-acp",
+    npmUrl: "https://www.npmjs.com/package/@ryancormack/strands-acp",
+  },
+  {
     name: "kiro-mcp-manager",
     description: "MCP server manager for macOS",
     language: "Swift",
@@ -161,13 +170,13 @@ const languageColors: Record<string, string> = {
             {featuredProject.forks}
           </span>
         </div>
-        <span class="medium-link" onclick={`event.preventDefault(); event.stopPropagation(); window.open('${featuredProject.mediumUrl}', '_blank');`}>
+        <a class="medium-link" href={featuredProject.mediumUrl} target="_blank" rel="noopener noreferrer">
           Read on Medium
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="5" y1="12" x2="19" y2="12" />
             <polyline points="12 5 19 12 12 19" />
           </svg>
-        </span>
+        </a>
       </div>
     </a>
 
@@ -198,6 +207,11 @@ const languageColors: Record<string, string> = {
                 </svg>
                 {project.stars}
               </span>
+            )}
+            {project.npmUrl && (
+              <a class="npm-badge" href={project.npmUrl} target="_blank" rel="noopener noreferrer">
+                npm
+              </a>
             )}
           </div>
         </a>
@@ -434,6 +448,24 @@ const languageColors: Record<string, string> = {
     gap: 0.3rem;
     font-size: 0.85rem;
     color: var(--color-text-muted);
+  }
+
+  .npm-badge {
+    display: inline-flex;
+    align-items: center;
+    background: #cb3837;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    text-transform: lowercase;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+
+  .npm-badge:hover {
+    opacity: 0.85;
   }
 
   .view-all {
