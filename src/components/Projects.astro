@@ -19,6 +19,15 @@ const featuredProject = {
 
 const projects = [
   {
+    name: "strands-acp",
+    description: "ACP bridge for Strands agents - expose any Strands agent via the Agent Client Protocol",
+    language: "TypeScript",
+    stars: 0,
+    archived: false,
+    url: "https://github.com/ryancormack/strands-acp",
+    npmUrl: "https://www.npmjs.com/package/@ryancormack/strands-acp",
+  },
+  {
     name: "kiro-mcp-manager",
     description: "MCP server manager for macOS",
     language: "Swift",
@@ -197,6 +206,11 @@ const languageColors: Record<string, string> = {
                   <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
                 </svg>
                 {project.stars}
+              </span>
+            )}
+            {project.npmUrl && (
+              <span class="npm-badge" onclick={`event.preventDefault(); event.stopPropagation(); window.open('${project.npmUrl}', '_blank');`}>
+                npm
               </span>
             )}
           </div>
@@ -434,6 +448,24 @@ const languageColors: Record<string, string> = {
     gap: 0.3rem;
     font-size: 0.85rem;
     color: var(--color-text-muted);
+  }
+
+  .npm-badge {
+    display: inline-flex;
+    align-items: center;
+    background: #cb3837;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    text-transform: lowercase;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+
+  .npm-badge:hover {
+    opacity: 0.85;
   }
 
   .view-all {
